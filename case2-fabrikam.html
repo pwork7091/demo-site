@@ -1,1 +1,81 @@
-<h1>Case Study 2: Fabrikam, Inc</h1><pre>...Fabrikam case study content trimmed for brevity...</pre>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Case Study 2: Fabrikam, Inc</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <h1>Case Study 2: Fabrikam, Inc</h1>
+  <pre>***************************************************
+Case Study 2: Fabrikam, inc Case Study A (Topic 2)*
+***************************************************
+
+Overview: Existing Environment
+Fabrikam, Inc. is an engineering company that has offices throughout Europe. The company has a main office in London and three branch offices in Amsterdam Berlin, and Rome.
+
+Active Directory Environment:
+The network contains two Active Directory forests named corp.fabnkam.com and rd.fabrikam.com. There are no trust relationships between the forests. Corp.fabrikam.com is a production forest that contains identities used for internal user and computer authentication. Rd.fabrikam.com is used by the research and development (R&amp;D) department only. The R&amp;D department is restricted to using on-premises resources only.
+
+Network Infrastructure:
+Each office contains at least one domain controller from the corp.fabrikam.com domain.
+The main office contains all the domain controllers for the rd.fabrikam.com forest.
+All the offices have a high-speed connection to the Internet.
+An existing application named WebApp1 is hosted in the data center of the London office. WebApp1 is used by customers to place and track orders. WebApp1 has a web tier that uses Microsoft Internet Information Services (IIS) and a database tier that runs Microsoft SQL Server 2016. The web tier and the database tier are deployed to virtual machines that run on Hyper-V.
+The IT department currently uses a separate Hyper-V environment to test updates to WebApp1.
+Fabrikam purchases all Microsoft licenses through a Microsoft Enterprise Agreement that includes Software Assurance.
+
+Problem Statement:
+The use of Web App1 is unpredictable. At peak times, users often report delays. At other times, many resources for WebApp1 are underutilized.
+
+Requirements: Planned Changes:
+Fabrikam plans to move most of its production workloads to Azure during the next few years.
+As one of its first projects, the company plans to establish a hybrid identity model, facilitating an upcoming Microsoft Office 365 deployment
+All R&amp;D operations will remain on-premises.
+Fabrikam plans to migrate the production and test instances of WebApp1 to Azure.
+
+Technical Requirements:
+Fabrikam identifies the following technical requirements:
+
+Web site content must be easily updated from a single point.
+
+User input must be minimized when provisioning new app instances.
+
+Whenever possible, existing on premises licenses must be used to reduce cost.
+
+Users must always authenticate by using their corp.fabrikam.com UPN identity.
+
+Any new deployments to Azure must be redundant in case an Azure region fails.
+
+Whenever possible, solutions must be deployed to Azure by using platform as a service (PaaS).
+
+An email distribution group named IT Support must be notified of any issues relating to the directory synchronization services.
+
+Directory synchronization between Azure Active Directory (Azure AD) and corp.fabhkam.com must not be affected by a link failure between Azure and the on premises network.
+
+Database Requirements:
+Fabrikam identifies the following database requirements:
+
+Database metrics for the production instance of WebApp1 must be available for analysis so that database administrators can optimize the performance settings.
+
+To avoid disrupting customer access, database downtime must be minimized when databases are migrated.
+
+Database backups must be retained for a minimum of seven years to meet compliance requirement
+
+Security Requirements:
+Fabrikam identifies the following security requirements:
+
+Company information including policies, templates, and data must be inaccessible to anyone outside the company
+
+Users on the on-premises network must be able to authenticate to corp.fabrikam.com if an Internet link fails.
+
+Administrators must be able authenticate to the Azure portal by using their corp.fabrikam.com credentials.
+
+All administrative access to the Azure portal must be secured by using multi-factor authentication.
+
+The testing of WebApp1 updates must not be visible to anyone outside the company.
+</pre>
+  <p><a href="index.html">← Back to Home</a></p>
+</body>
+</html>
