@@ -7,11 +7,24 @@
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <h1>Case Study Demo</h1>
-  <ul>
-    <li><a href="case1-litware.html">Case Study 1: Litware, Inc (Topic&nbsp;1)</a></li>
-    <li><a href="case2-fabrikam.html">Case Study 2: Fabrikam, Inc (Topic&nbsp;2)</a></li>
-    <li><a href="case3-contoso.html">Case Study 3: Contoso (Topic&nbsp;3)</a></li>
-  </ul>
+  <h1>Case Study Interactive Site</h1>
+
+  <nav id="top-nav">
+    <button id="case1-btn">Case 1</button>
+    <button id="case2-btn">Case 2</button>
+    <button id="case3-btn">Case 3</button>
+  </nav>
+
+  <div id="main-container">
+    <div id="left-nav">
+      <ul id="nav-list"></ul>
+    </div>
+    <div id="right-content">
+      <p>Select a case from the top menu, then an item from the left menu to see details.</p>
+    </div>
+  </div>
+
+  <script src="parsed_data.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
