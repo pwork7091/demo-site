@@ -1,8 +1,151 @@
-body{font-family:Arial,Helvetica,sans-serif;margin:40px;background:#f4f4f4;color:#222;}
-h1{color:#333;}
-h2{margin-top:1.2em;color:#0e549e}
-pre{white-space:pre-wrap;background:#fff;padding:1em;border-radius:6px;box-shadow:0 0 4px rgba(0,0,0,.1);}
-ul{list-style-type:none;padding-left:0;}
-li{margin:8px 0;}
-a{color:#007acc;text-decoration:none;font-size:18px;}
-a:hover{text-decoration:underline;}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0; /* Adjusted for full-width top-nav */
+  background: #f4f4f4;
+  color: #222;
+}
+
+h1 {
+  color: #333;
+  text-align: center; /* Center the main title */
+  padding: 10px 0;
+  margin: 0 0 10px 0; /* Add some margin below */
+  background-color: #ddd; /* Give h1 a background */
+}
+
+h2 {
+  margin-top: 1.2em;
+  color: #0e549e;
+}
+
+pre {
+  white-space: pre-wrap;
+  background: #fff;
+  padding: 1em;
+  border-radius: 6px;
+  box-shadow: 0 0 4px rgba(0,0,0,.1);
+  overflow-x: auto; /* Handle horizontal overflow for pre tags */
+}
+
+/* Keep original ul/li for potential use inside #right-content */
+ul {
+  /* list-style-type:none; */ /* Removing this to allow default styles in content area */
+  /* padding-left:0; */
+}
+
+li {
+  /* margin:8px 0; */ /* Removing this for same reason */
+}
+
+a {
+  color: #007acc;
+  text-decoration: none;
+  /* font-size:18px; */ /* Let font size be inherited or set specifically */
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* New Styles */
+#top-nav {
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#top-nav button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  background-color: #555;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#top-nav button:hover {
+  background-color: #777;
+}
+
+.active-case-button {
+  background-color: #007acc !important; /* Use important to override default if needed */
+  color: white !important;
+}
+
+#main-container {
+  display: flex;
+  margin: 0 15px; /* Add some side margins to the main content area */
+}
+
+#left-nav {
+  width: 25%;
+  min-width: 200px; /* Minimum width for smaller screens */
+  max-width: 300px; /* Maximum width */
+  padding: 15px;
+  background-color: #e9e9e9;
+  border-radius: 5px;
+  margin-right: 15px;
+  height: calc(100vh - 150px); /* Adjust height based on h1 and top-nav, approx */
+  overflow-y: auto;
+}
+
+#nav-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+#nav-list li {
+  padding: 10px;
+  margin-bottom: 8px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+#nav-list li:hover {
+  background-color: #f0f0f0;
+}
+
+.active-nav-item {
+  background-color: #007acc !important;
+  color: white !important;
+  border-left: 5px solid #0056b3 !important;
+}
+
+#right-content {
+  flex-grow: 1;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 5px;
+  height: calc(100vh - 150px); /* Adjust height based on h1 and top-nav, approx */
+  overflow-y: auto; /* Handle vertical overflow */
+}
+
+/* Styles for tables generated from markdown */
+#right-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+#right-content th, #right-content td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+#right-content th {
+  background-color: #f2f2f2;
+}
+
+/* Specific styles for HTML table content if needed */
+#right-content .html-table-content {
+    /* Add any specific container styles if you wrap the HTML table */
+}
