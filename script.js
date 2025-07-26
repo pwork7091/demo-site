@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     for (const mainSectionKey in caseData) {
       if (caseData.hasOwnProperty(mainSectionKey)) {
         const mainSection = caseData[mainSectionKey];
-        
+
         // If mainSection is a string, it's a direct content item (like in Case 2)
         if (typeof mainSection === 'string') {
             const li = document.createElement('li');
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
       rightContent.innerHTML = '<p>No items in this case study.</p>';
     }
   }
-  
+
   // Event listener for left navigation list (event delegation)
   navList.addEventListener('click', (event) => {
     if (event.target && event.target.tagName === 'LI') {
@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const content = siteData[currentCaseName][mainSection][subSection];
         rightContent.innerHTML = content;
       }
-      
+
       updateActiveState(li, Array.from(navList.getElementsByTagName('li')), 'active-nav-item');
       currentNavItem = li;
     }
